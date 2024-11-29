@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-container h1 {
+            font-size: 24px;
+            color: #5a67d8;
+            margin-bottom: 10px;
+        }
+
+        .result-container p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .result-container .result {
+            font-weight: bold;
+            font-size: 20px;
+            color: #2d3748;
+            margin-top: 10px;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #5a67d8;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #434bb6;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <p>The prediction based on your inputs is:</p>
+        <div class="result">{{ result }}</div>
+        <a href="/" class="back-button">Go Back</a>
+    </div>
+</body>
+</html>
