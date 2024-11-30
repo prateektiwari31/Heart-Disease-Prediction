@@ -23,9 +23,6 @@ from django.contrib.auth.urls import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Model.urls')),
-    
-    path('accounts/',include('django.contrib.auth.urls')),
-    
+    path('accounts/',include('django.contrib.auth.urls')),   
 ]
-
 urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

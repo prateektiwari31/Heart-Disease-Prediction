@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from .forms import UserRegistrationForm
 from django.contrib.auth import login 
 import pandas as pd
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login
 
 from joblib import load
 model=load('./savedModels/model.joblib')
@@ -69,3 +71,4 @@ def register(request):
     else:
      form=UserRegistrationForm()
     return render(request,'registration/register.html',{'form' : form})
+
