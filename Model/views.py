@@ -8,11 +8,9 @@ from django.contrib.auth import login
 from joblib import load
 model=load('./savedModels/model.joblib')
 
-# Create your views here.
-
 def predictor(request):
+    
     return render(request,'main.html')
-
 
 def formInfo(request):
     # Retrieve and convert query parameters to numeric types
@@ -47,16 +45,13 @@ def formInfo(request):
         'thal': thal
     }])
 
-    # Predict using the model
     y_pred = model.predict(input_data)
-
-    # Interpret the prediction
+    
     if y_pred[0] == 0:
         y_pred = 'No Heart Disease'
     else:
         y_pred = 'Heart Disease'
 
-    # Render the result page
     return render(request, 'result.html', {'result': y_pred})
 
 def register(request):
@@ -71,4 +66,3 @@ def register(request):
     else:
      form=UserRegistrationForm()
     return render(request,'registration/register.html',{'form' : form})
-

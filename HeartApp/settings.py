@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Model',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'HeartApp.urls'
@@ -131,5 +133,5 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_URL ='/accounts/login'
-LOGIN_REDIRECT_URL = '/tweet/'
-LOGOUT_REDIRECT_URL = '/tweet/'
+LOGIN_REDIRECT_URL = 'predictor'
+LOGOUT_REDIRECT_URL = 'predictor'
